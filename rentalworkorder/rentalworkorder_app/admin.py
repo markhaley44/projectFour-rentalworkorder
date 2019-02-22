@@ -1,3 +1,10 @@
 from django.contrib import admin
+from .models import BuildingAdmin
+from .models import Tenant
+from .models import MaintenanceStaff
+from .models import WorkOrder
 
-# Register your models here.
+admin.site.register(BuildingAdmin),
+admin.site.register(WorkOrder),
+admin.site.register(Tenant),
+admin.site.register(MaintenanceStaff)
