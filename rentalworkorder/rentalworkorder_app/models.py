@@ -14,7 +14,8 @@ class WorkOrder(models.Model):
 class Tenant(models.Model):
     name = models.CharField(default="Name", max_length=100)
     unit = models.CharField(max_length=50)
-    workOrder = models.ForeignKey(WorkOrder, on_delete=models.CASCADE)
+    workOrder = models.ForeignKey(
+        WorkOrder, on_delete=models.CASCADE, related_name='tenant')
 
     def __str__(self):
         return self.name

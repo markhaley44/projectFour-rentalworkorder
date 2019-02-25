@@ -2,22 +2,29 @@ from rest_framework import serializers
 from .models import WorkOrder, Tenant, BuildingAdmin, MaintenanceStaff
 
 
-class WorkOrderSerializers(serializers.ModelSerializer):
+class WorkOrderSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = WorkOrder
         fields = ('id', 'problemDescription')
 
 
-class TenantSerializers(serializers.ModelSerializer):
+class TenantSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Tenant
         fields = ('name', 'unit', 'workOrder')
 
 
-class BuildingAdminSerializers(serializers.ModelSerializer):
+class BuildingAdminSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = BuildingAdmin
         fields = ('tenantsName')
+
+
+class MaintenanceStaffSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = MaintenanceStaff
+        fields = ('workOrder')
