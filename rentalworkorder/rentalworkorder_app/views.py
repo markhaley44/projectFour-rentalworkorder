@@ -5,20 +5,20 @@ from .serializers import TenantSerializer, BuildingAdminSerializer, WorkOrderSer
 
 
 class BuildingAdminView(viewsets.ModelViewSet):
-    serializer_class = BuildingAdminSerializer
     queryset = BuildingAdmin.objects.all()
+    serializer_class = BuildingAdminSerializer
 
 
 class TenantView(viewsets.ModelViewSet):
-    serializer_class = TenantSerializer
     queryset = Tenant.objects.all()
+    serializer_class = TenantSerializer
 
 
-class WorkOrder(viewsets.ModelViewSet):
-    serializer_class = WorkOrderSerializer
+class WorkOrderView(viewsets.ModelViewSet):
     queryset = WorkOrder.objects.all()
+    serializer_class = WorkOrderSerializer
 
 
-class MaintenanceStaff(viewsets.ModelViewSet):
-    serializer_class = MaintenanceStaffSerializer
+class MaintenanceStaffView(viewsets.ModelViewSet):
     queryset = MaintenanceStaff.objects.all()
+    serializer_class = MaintenanceStaffSerializer
