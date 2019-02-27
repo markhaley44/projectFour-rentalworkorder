@@ -20,11 +20,11 @@ class BuildingAdminSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = BuildingAdmin
-        fields = ('tenantsName')
+        fields = "__all__"
 
 
 class MaintenanceStaffSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = MaintenanceStaff
-        fields = ('workOrder')
+        fields = "__all__"
