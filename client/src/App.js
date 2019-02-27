@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Layout, Header, Navigation, } from 'react-mdl';
+import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
 import './App.css';
-
+import WorkOrder from './components/WorkOrder';
 class App extends Component {
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Layout>
+          <Header className="header-color" title="Belmont Palace" scroll>
+            <Navigation>
+              <Router>
+                <Switch>
+                  <Link to="/new_workOrder">Place a New Work-Order</Link>
+                  <Route exact path='/workorder' component={WorkOrder}></Route>
+                </Switch>
+              </Router>
+            </Navigation>
+          </Header>
+        </Layout>
       </div>
     );
   }
