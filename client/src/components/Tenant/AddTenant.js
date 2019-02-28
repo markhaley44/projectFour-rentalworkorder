@@ -19,7 +19,7 @@ class AddTenant extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
         const payload = this.state.tenant
-        axios.post('/api/v1/tenant', payload)
+        axios.post('/api/v1/tenant/', payload)
             .then((res) => {
                 this.props.getAllTenant()
                 this.props.toggleAddTenant()
@@ -40,7 +40,7 @@ class AddTenant extends Component {
                             onChange={this.handleChange} />
                     </div>
                     <div>
-                        <input type="text" placeholder="Work Order Request" name="workOrder" value={this.state.tenant.workOrder}
+                        <input type="textarea" placeholder="Work Order Request" name="workOrder" value={this.state.tenant.workOrder}
                             onChange={this.handleChange} />
                     </div>
                     <button>Submit</button>
