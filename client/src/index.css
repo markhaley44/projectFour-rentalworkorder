@@ -1,6 +1,13 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: rgb(202, 171, 171);
+  background: url('');
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  height: 100vh;
+  width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
