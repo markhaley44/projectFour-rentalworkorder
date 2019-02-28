@@ -5,17 +5,19 @@ import './App.css';
 import Navbar from './components/Navbar';
 import AddTenant from './components/Tenant/AddTenant';
 import LandingPage from './components/LandingPage';
+import SingleTenant from './components/Tenant/SingleTenant';
 class App extends Component {
 
   render() {
     return (
       <div className="App">
         <Navbar />
-        <AddTenant />
         <Router>
           <Switch>
             <Route exact path="/" component={LandingPage} />
             <Route exact path="/tenant" component={AddTenant} />
+            <Route exact path="/tenant/:userId" component={SingleTenant} />
+
 
 
           </Switch>

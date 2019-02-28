@@ -18,7 +18,7 @@ class AddTenant extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        const payload = this.state.tenant
+        const payload = this.state.tenant;
         axios.post('/api/v1/tenant/', payload)
             .then((res) => {
                 this.props.getAllTenant()

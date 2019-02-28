@@ -7,8 +7,8 @@ class EditTenant extends Component {
     }
 
     handleChange = (event) => {
-        const user = { ...this.state.tenant }
-        user[event.target.name] = event.target.value
+        const tenant = { ...this.state.tenant }
+        tenant[event.target.name] = event.target.value
         this.setState({ tenant })
     }
 
@@ -36,7 +36,7 @@ class EditTenant extends Component {
                             onChange={(event) => this.handleChange(event)} />
                     </div>
                     <div>
-                        <input type="textarea" placeholder="Work Order Request" name="workOrder" value={this.state.tenant.workOrder}
+                        <input type="textarea" placeholder="Work Order Request" name="workOrder"
                             onChange={(event) => this.handleChange(event)} />
                     </div>
                     <button>Submit</button>

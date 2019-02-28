@@ -37,6 +37,7 @@ class Navbar extends Component {
                 </div>
 
                 <NavLinks as="a" href="/">Home</NavLinks>
+                <NavLinks as="a" href="/tenant">Add Tenant</NavLinks>
                 <NavLinks as="a" href="/">Create A WorkOrder</NavLinks>
             </NavBarcon>
         );
