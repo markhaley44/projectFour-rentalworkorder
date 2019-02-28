@@ -6,10 +6,11 @@ class WorkOrderSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = WorkOrder
-        fields = ('id', 'problemDescription')
+        fields = "__all__"
 
 
 class TenantSerializer(serializers.ModelSerializer):
+    workOrder = WorkOrderSerializer(many=True, read_only=True)
 
     class Meta:
         model = Tenant
