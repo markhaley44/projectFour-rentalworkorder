@@ -4,8 +4,8 @@ from . import views
 
 
 urlpatterns = [
+    path('', views.FrontendAppView.as_view()),
     path('admin/', admin.site.urls),
-    path('api/v1/', include("rentalworkorder_app.urls")),
-    url(r'^$', views.FrontendAppView.as_view())
+    path('api/v1/', include("rentalworkorder_app.urls"))
 
 ]
