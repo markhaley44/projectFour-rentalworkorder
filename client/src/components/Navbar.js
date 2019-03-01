@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const NavBarcon = styled.div`
 display: grid;
@@ -32,12 +33,9 @@ class Navbar extends Component {
             <NavBarcon>
                 <Logo>
                     Belmont Palace
-            </Logo>
-                <div>
-                </div>
-
+                </Logo>
                 <NavLinks as="a" href="/">Home</NavLinks>
-                <NavLinks as="a" href="/tenant">Add Tenant</NavLinks>
+                <NavLinks as='a' href="/tenant">Add Tenant</NavLinks>
                 <NavLinks as="a" href="/">Create A WorkOrder</NavLinks>
             </NavBarcon>
         );

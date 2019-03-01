@@ -10,16 +10,13 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div>
         <Navbar />
         <Router>
           <Switch>
             <Route exact path="/" component={LandingPage} />
             <Route exact path="/tenant" component={AddTenant} />
             <Route exact path="/tenant/:userId" component={SingleTenant} />
-
-
-
           </Switch>
         </Router>
 
