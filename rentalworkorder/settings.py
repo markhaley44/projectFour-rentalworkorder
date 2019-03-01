@@ -1,3 +1,4 @@
+import django_heroku
 """
 Django settings for rentalworkorder project.
 
@@ -39,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rentalworkorder_app',
     'rest_framework',
-    'corsheaders'
+    'corsheaders',
+    'django_extensions'
 ]
 
 MIDDLEWARE = [
@@ -70,6 +72,15 @@ TEMPLATES = [
         },
     },
 ]
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'sample_database',
+        'USER': 'sample',
+        'PASSWORD': 'sample',
+        'HOST': 'localhost'
+    }
+}
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -134,3 +145,5 @@ CORS_ORIGIN_WHITELIST = (
 )
 
 CORS_ORIGIN_ALLOW_ALL = True
+
+django_heroku.settings(locals())
