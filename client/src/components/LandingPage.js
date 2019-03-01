@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { Grid, Cell } from 'react-mdl';
 
 
 class LandingPage extends Component {
@@ -9,8 +8,8 @@ class LandingPage extends Component {
 
                 <img
                     src="https://www.400belmont.com/wp-content/uploads/2015/04/400-Belmont-Building-Eve-01.jpg"
-                    alt="my stunt double"
-                    className='my-image'
+                    alt="beautiful apartment"
+                    className='belmont'
                 />
             </div>
         );

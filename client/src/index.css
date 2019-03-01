@@ -21,5 +21,8 @@ code {
 }
 
 .home-image img{
-  background-position: cover;
+  background-size: 100%;
+}
+.belmont {
+  background-size: cover;
 }
