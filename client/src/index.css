@@ -20,6 +20,6 @@ code {
     monospace;
 }
 
-.landing-grid img{
-  background-position: contain;
+.home-image img{
+  background-position: cover;
 }

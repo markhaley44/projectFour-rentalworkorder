@@ -17,14 +17,14 @@ class SingleTenant extends Component {
 
     getSingleTenant = () => {
         const userId = this.props.match.params.userId
-        axios.get(`api/v1/Tenant/${userId}`)
+        axios.get(`http://localhost:8000/api/v1/Tenant/${userId}`)
             .then((res) => {
                 this.setState({ tenant: res.data })
             })
     }
     deleteTenant = () => {
         const userId = this.props.match.params.userId
-        axios.delete(`api/v1/Tenant/${userId}`)
+        axios.delete(`http://localhost:8000/api/v1/Tenant/${userId}`)
             .then(() => this.props.history.goback())
     }
 

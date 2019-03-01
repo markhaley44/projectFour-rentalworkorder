@@ -5,7 +5,7 @@ const NavBarcon = styled.div`
 display: grid;
 grid-template-columns: 2fr 2fr  1fr 1fr 2fr;
 height: 75px;
-width: 100 ;
+width: 100% ;
 background: blue;
 `
 const Logo = styled.div`

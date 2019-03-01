@@ -19,10 +19,10 @@ class AddTenant extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
         const payload = this.state.tenant;
-        axios.post('/api/v1/tenant/', payload)
+        axios.post('http://localhost:8000/api/v1/Tenant/', payload)
             .then((res) => {
-                this.props.getAllTenant()
-                this.props.toggleAddTenant()
+                // this.props.getAllTenant()
+                // this.props.toggleAddTenant()
             })
     }
 
@@ -30,6 +30,9 @@ class AddTenant extends Component {
     render() {
         return (
             <div>
+                <div>
+                    <h3>Add New Tenant Here</h3>
+                </div>
                 <form onSubmit={this.handleSubmit}>
                     <div>
                         <input type="text" placeholder="Tenant Name" name="name" value={this.state.tenant.name}
